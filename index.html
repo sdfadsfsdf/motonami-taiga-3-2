@@ -219,6 +219,49 @@
                 padding: 20px;
             }
         }
+        /* 追加：全要素のレイアウト計算を安定させる */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* 追加：画像は横幅いっぱい＋はみ出し防止 */
+img { max-width: 100%; height: auto; display: block; }
+
+/* 追加：スマホ（～600px）では余白を削って全幅表示 */
+@media (max-width: 600px) {
+  body {
+    padding: 0;              /* 画面の外側余白をなくす */
+    background: #fff;        /* 下地のグラデ背景を消したい場合はこのまま */
+  }
+  .container {
+    max-width: 100%;         /* 800px制限を解除して全幅に */
+    width: 100%;
+    margin: 0;               /* 中央寄せの余白をなくす */
+    padding: 16px;           /* 内側余白は少しだけ */
+    border-radius: 0;        /* 端まで使うので角丸・影をオフに */
+    box-shadow: none;
+  }
+  .cover-page {
+    padding: 24px;           /* カバーも内側余白を調整 */
+    border-radius: 0;
+    margin-bottom: 24px;
+    min-height: 0;           /* 600px固定を実質無効化（高さが窮屈なら） */
+  }
+  /* 文字サイズを画面幅に合わせて自動縮小 */
+  .cover-page h1 { font-size: clamp(28px, 8vw, 40px); }
+  .cover-page .subtitle { font-size: clamp(16px, 4.8vw, 22px); }
+  h2 { font-size: clamp(20px, 5.5vw, 28px); }
+  h3 { font-size: clamp(18px, 5vw, 22px); }
+
+  /* セクションの箱もはみ出し防止＆余白調整 */
+  .attraction,
+  .feature-box,
+  .ranking,
+  .learned-points,
+  .message-box {
+    max-width: 100%;
+    margin: 16px 0;
+    padding: 16px;
+  }
+}
     </style>
 </head>
 <body>
@@ -282,8 +325,8 @@
             <span class="badge">ふれあい</span>
             <span class="badge fun">動物</span>
             <div style="width:100%; text-align:center; margin: 20px 0;">
-                    <img src="yambaru.jpg" alt="ヤンバルフレンズの展示室" style="width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
-                    <div style="font-size:14px; color:#666; margin-top:8px;">ヤンバルフレンズのてんじ室の様子</div>
+                <img src="yambaru.jpg" alt="ヤンバルフレンズの展示室" style="width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+                <div style="font-size:14px; color:#666; margin-top:8px;">ヤンバルフレンズのてんじ室の様子</div>
             </div>
             
             <div class="feature-box">
@@ -317,8 +360,8 @@
             <span class="badge">ぼうけん</span>
 
             <div style="width:100%; text-align:center; margin: 20px 0;">
-                    <img src="buggy.jpg" alt="バギーボルテージのバギー" style="width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
-                    <div style="font-size:14px; color:#666; margin-top:8px;">のったバギー</div>
+                <img src="buggy.jpg" alt="バギーボルテージのバギー" style="width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+                <div style="font-size:14px; color:#666; margin-top:8px;">のったバギー</div>
             </div>
 
             <div class="feature-box">
