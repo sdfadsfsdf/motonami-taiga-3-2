@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沖縄ジャングリアの大冒険！ - 夏休み自由研究</title>
+    <style>
+        @media print {
+            .page-break {
+                page-break-after: always;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        
+        body {
+            font-family: 'メイリオ', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        
+        .cover-page {
+            text-align: center;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .cover-page h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .cover-page .subtitle {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        
+        .student-info {
+            margin-top: 40px;
+            font-size: 20px;
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        
+        h2 {
+            color: #4CAF50;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 28px;
+        }
+        
+        h3 {
+            color: #ff6b6b;
+            font-size: 22px;
+            margin-top: 30px;
+            padding-left: 10px;
+            border-left: 5px solid #ff6b6b;
+        }
+        
+        .attraction {
+            background: #f8f9fa;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border: 2px solid #e0e0e0;
+        }
+        
+        .attraction-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .emoji {
+            font-size: 40px;
+            margin-right: 15px;
+        }
+        
+        .attraction h3 {
+            margin: 0;
+            flex-grow: 1;
+        }
+        
+        .feature-box {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 5px solid #ffd93d;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .point-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .point-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 18px;
+        }
+        
+        .point-list li:before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+        }
+        
+        .summary-section {
+            background: linear-gradient(135deg, #ffd93d 0%, #ff6b6b 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .summary-section h2 {
+            color: white;
+            border-bottom: 3px solid white;
+        }
+        
+        .ranking {
+            background: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .ranking ol {
+            font-size: 20px;
+            line-height: 2;
+        }
+        
+        .ranking li {
+            margin: 10px 0;
+        }
+        
+        .learned-points {
+            background: #e8f5e9;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .message-box {
+            background: #fff3e0;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border: 2px dashed #ff9800;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+            color: #666;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin: 5px;
+        }
+        
+        .badge.new {
+            background: #ff6b6b;
+        }
+        
+        .badge.fun {
+            background: #2196F3;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 表紙 -->
+        <div class="cover-page page-break">
+            <h1>🌴 沖縄ジャングリアの大冒険！ 🦕</h1>
+            <div class="subtitle">〜 やんばるの森のテーマパークを調べてみた 〜</div>
+            <div class="student-info">
+                <p>夏休み自由研究</p>
+                <p>3年2組 名前：元波大琥</p>
+                <p>2025年8月</p>
+            </div>
+        </div>
+
+        <!-- はじめに -->
+        <div class="page-break">
+            <h2>📚 調べた理由</h2>
+            <div class="feature-box">
+                <p style="font-size: 18px; line-height: 2;">
+                    沖縄の北部に新しくできた「ジャングリア」というテーマパークがあると聞きました。<br>
+                    恐竜に会えたり、バギーに乗れたり、やんばるの動物と友だちになれるなんて、とても楽しそう！<br>
+                    家族みんなで行ってみたいので、どんなアトラクションがあるか詳しく調べることにしました。
+                </p>
+            </div>
+        </div>
+
+        <!-- ダイナソーサファリ -->
+        <div class="attraction page-break">
+            <div class="attraction-title">
+                <span class="emoji">🦕</span>
+                <h3>1. ダイナソーサファリ（DINOSAUR SAFARI）</h3>
+            </div>
+            <span class="badge new">大迫力</span>
+            <span class="badge fun">探検</span>
+            
+            <div class="feature-box">
+                <h4>🔍 どんなアトラクション？</h4>
+                <p>ジャングルの中を探検しながら、本物みたいに動くきょうりゅうたちに会えるツアーです。まるでタイムスリップしたみたい！</p>
+            </div>
+            
+            <div class="feature-box">
+                <h4>✨ ここがすごい！</h4>
+                <ul class="point-list">
+                    <li>大きなきょうりゅうが本物みたいに動く</li>
+                    <li>きょうりゅうのなき声が聞こえてドキドキする</li>
+                    <li>ティラノサウルスやトリケラトプスがいる</li>
+                    <li>写真をたくさんとれる</li>
+                </ul>
+            </div>
+            
+            <div class="message-box">
+                <strong>🎯 ぼくの感想：</strong><br>
+                車のスピードが早くて、面白かった
+            </div>
+        </div>
+
+        <!-- ヤンバルフレンズ -->
+        <div class="attraction page-break">
+            <div class="attraction-title">
+                <span class="emoji">🐾</span>
+                <h3>2. ヤンバルフレンズ（YAMBARU FRIENDS）</h3>
+            </div>
+            <span class="badge">ふれあい</span>
+            <span class="badge fun">動物</span>
+            
+            <div class="feature-box">
+                <h4>🔍 どんなアトラクション？</h4>
+                <p>沖縄の森「やんばる」に住んでいる動物たちと友だちになれる場所です。珍しい動物がいっぱい！</p>
+            </div>
+            
+            <div class="feature-box">
+                <h4>🐦 会える動物たち</h4>
+                <ul class="point-list">
+                    <li>ヤンバルクイナ（沖縄だけの特別な鳥）</li>
+                    <li>リュウキュウヤマガメ</li>
+                    <li>オキナワトゲネズミ</li>
+                    <li>かわいい小動物たち</li>
+                </ul>
+            </div>
+            
+            <div class="message-box">
+                <strong>🎯 ぼくの感想：</strong><br>
+                まるで本物が動いているみたいで、ディズニーランドの同じだった。
+            </div>
+        </div>
+
+        <!-- バギーボルテージ -->
+        <div class="attraction page-break">
+            <div class="attraction-title">
+                <span class="emoji">🏎️</span>
+                <h3>3. バギーボルテージ（BUGGY VOLTAGE）</h3>
+            </div>
+            <span class="badge new">スリル</span>
+            <span class="badge">冒険</span>
+            
+            <div class="feature-box">
+                <h4>🔍 どんなアトラクション？</h4>
+                <p>ジャングルの中をバギーで走り抜ける大冒険！2つのコースから選べます。</p>
+            </div>
+            
+            <div class="feature-box">
+                <h4>🎮 2つのコース</h4>
+                <p><strong>①ファンアドベンチャーコース</strong></p>
+                <ul class="point-list">
+                    <li>家族みんなで楽しめる優しいコース</li>
+                    <li>景色を見ながらゆっくり走れる</li>
+                </ul>
+                
+                <p><strong>②アドレナリンチャレンジコース</strong></p>
+                <ul class="point-list">
+                    <li>もっとスリルを楽しみたい人向け</li>
+                    <li>でこぼこ道を走る本格コース</li>
+                </ul>
+            </div>
+            
+            <div class="message-box">
+                <strong>🎯 ぼくの感想：</strong><br>
+                パパの運転のスピードが速くてこわかった
+            </div>
+        </div>
+
+        <!-- スパジャングリア -->
+        <div class="attraction page-break">
+            <div class="attraction-title">
+                <span class="emoji">🌺</span>
+                <h3>4. スパジャングリア（SPA JUNGLIA）</h3>
+            </div>
+            <span class="badge">リラックス</span>
+            <span class="badge fun">温泉</span>
+            
+            <div class="feature-box">
+                <h4>🔍 どんな場所？</h4>
+                <p>たくさん遊んだ後に、ゆっくりできる温泉スパです。ジャングルの景色を見ながらお風呂に入れます。</p>
+            </div>
+            
+            <div class="feature-box">
+                <h4>♨️ ここがいいね！</h4>
+                <ul class="point-list">
+                    <li>温かいお風呂でリラックスできる</li>
+                    <li>家族みんなで入れる</li>
+                    <li>やんばるの森の景色がきれい</li>
+                    <li>疲れた体を休められる</li>
+                </ul>
+            </div>
+            
+            <div class="message-box">
+                <strong>🎯 ぼくの感想：</strong><br>
+                きもちよかった。
+            </div>
+        </div>
+
+        <!-- まとめ -->
+        <div class="summary-section page-break">
+            <h2>📝 調べてわかったこと・まとめ</h2>
+            
+            <div class="learned-points">
+                <h3 style="color: #2e7d32; border-left-color: #2e7d32;">🌟 学んだこと</h3>
+                <ul class="point-list">
+                    <li>ジャングリアは沖縄の自然を大切にしているテーマパーク</li>
+                    <li>やんばるの森には、珍しい動物がたくさん住んでいる</li>
+                    <li>恐竜と動物、両方楽しめるのは珍しい</li>
+                    <li>家族みんなで楽しめるように工夫されている</li>
+                    <li>沖縄の北部は自然がいっぱいで素敵な場所</li>
+                </ul>
+            </div>
+            
+            <div class="ranking">
+                <h3>🏆 行ってみたい順位</h3>
+                <ol>
+                    <li>🥇 ダイナソーサファリ（恐竜に会いたい！）</li>
+                    <li>🥈 バギーボルテージ（運転してみたい！）</li>
+                    <li>🥉 ヤンバルフレンズ（動物と友だちになりたい！）</li>
+                    <li>スパジャングリア（最後にゆっくりしたい）</li>
+                </ol>
+            </div>
+            
+            <div class="message-box" style="background: #e1f5fe; border-color: #2196F3;">
+                <h3 style="color: #1976d2; border: none;">💌 家族へのメッセージ</h3>
+                <p style="font-size: 18px; line-height: 2;">
+                    ジャングリアを調べて、とても行きたくなりました！<br>
+                    恐竜も動物も大好きなので、全部のアトラクションを体験したいです。<br>
+                    今度の休みに、家族みんなで沖縄に行けたらいいな。<br>
+                    いっぱい写真を撮って、また自由研究で発表したいです！
+                </p>
+            </div>
+        </div>
+
+        <!-- 終わりに -->
+        <div class="footer">
+            <p>🌴 おわり 🌴</p>
+            <p style="font-size: 14px;">参考：JUNGLIA（ジャングリア）公式情報</p>
+        </div>
+    </div>
+</body>
+</html>
